@@ -1,3 +1,4 @@
+#3
 def top_k_words(text, k):
     lower_text = text.lower()
     clean_text = ""
@@ -22,3 +23,7 @@ def top_k_words(text, k):
 
 
 print(top_k_words("Apple, banana! Apple orange banana apple. Orange banana?", 3))
+
+#4
+def filter_words(text):
+    words = text.split()
