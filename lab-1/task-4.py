@@ -1,14 +1,14 @@
 #4
-filter_words = lambda text: " ".join( #list to str
-        word.lower()
-        for word in text.split()
-        if sum(1 for c in word[1:-1] if c.isupper()) == 1)
-print (filter_words("heLlo WorLd thiS is a TeSt example"))
-
-filter_words = lambda text: " ".join(  # list → str
-    word.lower()
-    for word in text.split()
-    if sum(1 for c in word[1:-1] if c.isupper()) == 1
+result = lambda s: ' '.join(
+    map(
+        str.lower,
+        filter(
+            lambda word: sum(c.isupper() for c in word) == 1
+            and not word[0].isupper()
+            and not word[-1].isupper(),
+            s.split()
+        )
+    )
 )
 
-print(filter_words("heLlo WorLd thiS is a TeSt example"))
+print (result("heLlo WorLd thiS is a TeSt example"))
