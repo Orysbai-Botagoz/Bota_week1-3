@@ -12,3 +12,4 @@ result = lambda s: ' '.join(
 )
 
 print (result("heLlo WorLd thiS is a TeSt example"))
+#map(функция, итерируемый_объект)
