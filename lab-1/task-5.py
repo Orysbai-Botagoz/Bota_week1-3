@@ -14,4 +14,4 @@ def compress_text(text):
     if count > 1:
         new_text += str(count)
     return new_text
-print (compress_text("aaBBcDDD"))
+print (compress_text("aaBBcDDd"))
